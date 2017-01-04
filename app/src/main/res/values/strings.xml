@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">行走的艺术</string>
+
+    <!--loadViewHelp-->
+    <string name="bad_wangluo">加载失败\n轻触重新加载</string>
+    <string name="no_content">没有更多内容</string>
+</resources>
