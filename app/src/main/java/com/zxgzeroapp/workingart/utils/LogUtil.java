@@ -3,7 +3,7 @@ package com.zxgzeroapp.workingart.utils;
 import android.util.Log;
 
 public class LogUtil {
-	private static boolean isDebug = false;
+	private static boolean isDebug = true;
 	/*
 	 * log.e的输出
 	 * 设置为false时，阻断所有输出（error）

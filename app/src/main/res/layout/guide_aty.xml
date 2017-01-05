@@ -5,6 +5,7 @@
     android:clipToPadding="false"
     android:fitsSystemWindows="true"
      >
+    <!--去掉fitsystem就可以使得布局占用华为虚拟按键的空间位置-->
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_anim"
         android:layout_width="match_parent"

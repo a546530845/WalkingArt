@@ -1,10 +1,12 @@
 package com.zxgzeroapp.workingart.application;
 
 import android.app.Application;
-import android.database.sqlite.SQLiteDatabase;
 
 import com.zxgzeroapp.workingart.exceptionhandler.CrashHandler;
+import com.zxgzeroapp.workingart.jpush.JpushNotificationUtils;
 import com.zxgzeroapp.workingart.sp.SharedPrefHelper;
+
+import cn.jpush.android.api.JPushInterface;
 
 /**
  * 作者：zxg on 2016/9/29 17:15
@@ -12,7 +14,6 @@ import com.zxgzeroapp.workingart.sp.SharedPrefHelper;
 public class MyApplication extends Application {
     public static boolean isAppUpgrading = false;
     public static SharedPrefHelper mSharedPrefHelper;
-    public static SQLiteDatabase db;
 
     @Override
     public void onCreate() {
@@ -20,6 +21,10 @@ public class MyApplication extends Application {
 
         mSharedPrefHelper = SharedPrefHelper.getInstance(this);
         init();
+
+        JPushInterface.setDebugMode(false);
+        JPushInterface.init(this);
+        JpushNotificationUtils.setDiyStyleCustom(this.getApplicationContext());
 
 
     }

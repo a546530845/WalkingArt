@@ -4,5 +4,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@mipmap/welcome1" >
+    <!--用scrollView可以在华为手机上使得图片不变形-->
+    <com.zxgzeroapp.workingart.widget.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/welcome1"/>
+    </com.zxgzeroapp.workingart.widget.MyScrollView>
 
 </LinearLayout>

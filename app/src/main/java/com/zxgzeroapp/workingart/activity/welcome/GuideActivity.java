@@ -6,6 +6,7 @@ import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -47,6 +48,11 @@ public class GuideActivity extends BaseActivity {
 	protected void setLayoutView() {
 		// TODO Auto-generated method stub
 		setContentView(R.layout.guide_aty);
+//		JpushNotificationUtils.setDiyStyleCustom(this.getApplicationContext());
+//		//顶部导航栏
+//		getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);//A
+//		//底部虚拟按键透明
+		getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);//B,设置之后布局可以延展到虚拟按键里面去
 	}
 
 	@Override
