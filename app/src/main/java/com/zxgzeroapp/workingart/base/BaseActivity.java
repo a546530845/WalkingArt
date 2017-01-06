@@ -1,7 +1,6 @@
 package com.zxgzeroapp.workingart.base;
 
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
@@ -34,7 +33,7 @@ public abstract class BaseActivity extends RxAppCompatActivity {
     private final static String TAG = "BaseActivity";
     private CustomDialog proDialog;
     //上下文
-    public Activity mContext;
+    public RxAppCompatActivity mContext;
     //共享参数
     protected SystemBarTintManager mTintManager;
 

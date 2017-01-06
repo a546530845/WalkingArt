@@ -22,9 +22,18 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.welcome.GuideActivity"
+            android:label="引导界面"
             android:theme="@style/my_notitle"></activity>
         <activity android:name=".activity.MainActivity"
             android:theme="@style/my_notitle"></activity>
+        <activity android:name=".activity.welcome.WeaTherActivity"
+            android:label="天气"></activity>
+        <activity android:name=".activity.welcome.Constellation"
+            android:label="星座"></activity>
+        <activity android:name=".activity.welcome.JokeActivity"
+            android:label="笑话"></activity>
+        <activity android:name=".activity.welcome.FilmReviewActivity"
+            android:label="影评"></activity>
         <activity android:name=".activity.UpLoadActivity"></activity>
         <activity android:name=".activity.DownLoadActivity"></activity>
 

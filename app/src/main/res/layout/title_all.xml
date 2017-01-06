@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/article_top"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/title_height"
+	android:background="@mipmap/title"
+    android:orientation="vertical" >
+        <TextView
+            android:id="@+id/title_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+			android:minWidth="@dimen/dp_60"
+            android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"
+			android:drawableLeft="@mipmap/back"
+			android:gravity="center"
+            android:clickable="true"
+            android:onClick="onClickEvent"
+			android:paddingLeft="@dimen/dp_15"
+			android:textSize="@dimen/title_left_size"
+			android:textColor="@color/white"
+			android:text="@string/title_left"
+             />
+		<TextView 
+		    android:id="@+id/title_name"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_centerInParent="true"
+			android:text="@string/title_center"
+			android:textColor="@color/white"
+		    android:textSize="@dimen/title_center_size"
+		    />
+		<TextView
+			android:id="@+id/title_right"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:minWidth="@dimen/dp_60"
+			android:paddingRight="@dimen/dp_15"
+			android:clickable="true"
+			android:onClick="onClickEvent"
+			android:textSize="@dimen/title_right_size"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:gravity="center"
+			android:textColor="@color/white"
+			android:text="@string/title_right"
+			/>
+
+</RelativeLayout>

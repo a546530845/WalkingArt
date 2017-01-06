@@ -279,7 +279,7 @@ public class JEventUtils {
      * @param context
      */
     public static void onCountEvent(Context context) {
-        CountEvent countEvent = new CountEvent("test_countEventID"+eventIdIndex);
+        CountEvent countEvent = new CountEvent("countId");
         //添加自己的Extra 信息
         //方法1：增加一个hashMap<String,String>
         Map<String, String> extraMap = new HashMap<String, String>();
@@ -295,7 +295,6 @@ public class JEventUtils {
                 .addKeyValue("key_count_event_extra4", "value_extra4");
 
         JAnalyticsInterface.onEvent(context, countEvent);
-        eventIdIndex++;
     }
 
     /**

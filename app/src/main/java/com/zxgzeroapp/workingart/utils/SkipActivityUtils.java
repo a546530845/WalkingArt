@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.zxgzeroapp.workingart.R;
+
 /**
  * Created by zxg on 2015/6/2.
  */
@@ -18,6 +20,7 @@ public class SkipActivityUtils {
 	 */
 	public static void skipActivity(Activity mActivity, Class mClass) {
 		Intent intent = new Intent(mActivity, mClass);
+		mActivity.overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
 		mActivity.startActivity(intent);
 	}
 
@@ -31,6 +34,7 @@ public class SkipActivityUtils {
 	 */
 	public static void skipActivity(Activity mActivity, Class mClass, int requestCode) {
 		Intent intent = new Intent(mActivity, mClass);
+		mActivity.overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
 		mActivity.startActivityForResult(intent, requestCode);
 	}
 
@@ -45,6 +49,7 @@ public class SkipActivityUtils {
 	public static void skipActivityWithData(Activity mActivity, Class mClass, Bundle mBundle) {
 		Intent intent = new Intent(mActivity, mClass);
 		intent.putExtras(mBundle);
+		mActivity.overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
 		mActivity.startActivity(intent);
 	}
 
@@ -59,6 +64,7 @@ public class SkipActivityUtils {
 	public static void skipActivityWithData(Activity mActivity, Class mClass, Bundle mBundle, int requestCode) {
 		Intent intent = new Intent(mActivity, mClass);
 		intent.putExtras(mBundle);
+		mActivity.overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
 		mActivity.startActivityForResult(intent, requestCode);
 		;
 	}

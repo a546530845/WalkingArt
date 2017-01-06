@@ -40,11 +40,11 @@ public class LoginActivity extends RxAppCompatActivity implements IAppUpdateView
 
 	public void ClickEvent(View view){
 		switch (view.getId()){
-			case R.id.go:
+			case R.id.main_aty_add:
 				Intent mIntent = new Intent(this,UpLoadActivity.class);
 				startActivity(mIntent);
 				break;
-			case R.id.down:
+			case R.id.main_aty_constellation:
 				Intent mIntent2 = new Intent(this,DownLoadActivity.class);
 				startActivity(mIntent2);
 				break;
