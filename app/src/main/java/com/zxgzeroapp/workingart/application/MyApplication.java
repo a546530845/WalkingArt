@@ -6,6 +6,7 @@ import com.zxgzeroapp.workingart.exceptionhandler.CrashHandler;
 import com.zxgzeroapp.workingart.jpush.JpushNotificationUtils;
 import com.zxgzeroapp.workingart.sp.SharedPrefHelper;
 
+import cn.jiguang.analytics.android.api.JAnalyticsInterface;
 import cn.jpush.android.api.JPushInterface;
 
 /**
@@ -22,9 +23,12 @@ public class MyApplication extends Application {
         mSharedPrefHelper = SharedPrefHelper.getInstance(this);
         init();
 
-        JPushInterface.setDebugMode(false);
+        JPushInterface.setDebugMode(true);
         JPushInterface.init(this);
         JpushNotificationUtils.setDiyStyleCustom(this.getApplicationContext());
+
+        JAnalyticsInterface.init(this);
+        JAnalyticsInterface.setDebugMode(true);
 
 
     }

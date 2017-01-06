@@ -21,12 +21,12 @@
         android:clickable="true"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="上传"/>
+        android:text="点击计数"/>
     <Button
         android:id="@+id/down"
         android:onClick="ClickEvent"
         android:clickable="true"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="下载"/>
+        android:text="登录"/>
 </LinearLayout>

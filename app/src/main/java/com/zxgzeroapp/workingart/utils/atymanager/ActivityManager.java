@@ -2,8 +2,6 @@ package com.zxgzeroapp.workingart.utils.atymanager;
 
 import android.app.Activity;
 
-import com.zxgzeroapp.workingart.utils.LogUtil;
-
 import java.util.Stack;
 
 public class ActivityManager {
@@ -31,7 +29,6 @@ public class ActivityManager {
      * @param activity
      */
     public void removeActivity(Activity activity) {
-        LogUtil.e("退出", "ddd");
         int index = mActivities.indexOf(activity);
         if (index != -1) {
             mActivities.remove(index);

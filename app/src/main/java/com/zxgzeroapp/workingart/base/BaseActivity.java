@@ -16,10 +16,13 @@ import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
 import com.zxgzeroapp.workingart.R;
 import com.zxgzeroapp.workingart.custom.MyDialogUtil;
 import com.zxgzeroapp.workingart.loadView.LoadViewHelper;
+import com.zxgzeroapp.workingart.utils.LogUtil;
 import com.zxgzeroapp.workingart.utils.about.About_keyboard;
 import com.zxgzeroapp.workingart.utils.atymanager.ActivityManager;
 import com.zxgzeroapp.workingart.utils.title.SystemBarTintManager;
 import com.zxgzeroapp.workingart.widget.CustomDialog;
+
+import cn.jiguang.analytics.android.api.JAnalyticsInterface;
 
 
 /**
@@ -55,7 +58,6 @@ public abstract class BaseActivity extends RxAppCompatActivity {
         init();
 
     }
-
     public void instanceLoadingViewHelp(View mView) {
         helper = new LoadViewHelper(mView);
     }
@@ -183,13 +185,16 @@ public abstract class BaseActivity extends RxAppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        LogUtil.d("获取onResume类名=",this.getClass().getCanonicalName());
+        JAnalyticsInterface.onPageStart(this,this.getClass().getCanonicalName());
 
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-
+        LogUtil.d("获取onPause类名=",this.getClass().getCanonicalName());
+        JAnalyticsInterface.onPageEnd(this,this.getClass().getCanonicalName());
     }
 
     @Override
