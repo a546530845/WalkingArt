@@ -5,9 +5,68 @@
     android:clipToPadding="false"
     android:fitsSystemWindows="true">
     <include layout="@layout/title_all"></include>
-    <TextView
+    <RadioGroup
+        android:id="@+id/film_rg"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="影评"/>
+        android:layout_height="wrap_content"
+        android:background="@color/film_viewpagerIndicator"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="8dip"
+        android:paddingTop="8dip" >
+
+        <RadioButton
+            android:id="@+id/film_rb_inland"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/filmreview_selector"
+            android:button="@null"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingBottom="6dip"
+            android:paddingLeft="35dip"
+            android:paddingRight="35dip"
+            android:paddingTop="6dip"
+            android:text="@string/film_aty_inland"
+            android:textColor="@drawable/filmtext_color_selector"
+            android:textSize="@dimen/film_aty_indicatorsize" />
+
+        <RadioButton
+            android:id="@+id/film_rb_north"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/filmreview_selector"
+            android:button="@null"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingBottom="6dip"
+            android:paddingLeft="35dip"
+            android:paddingRight="35dip"
+            android:paddingTop="6dip"
+            android:text="@string/film_aty_north"
+            android:textColor="@drawable/filmtext_color_selector"
+            android:textSize="@dimen/film_aty_indicatorsize" />
+        <RadioButton
+            android:id="@+id/film_rb_hk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/filmreview_selector"
+            android:button="@null"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingBottom="6dip"
+            android:paddingLeft="35dip"
+            android:paddingRight="35dip"
+            android:paddingTop="6dip"
+            android:text="@string/film_aty_hk"
+            android:textColor="@drawable/filmtext_color_selector"
+            android:textSize="@dimen/film_aty_indicatorsize" />
+    </RadioGroup>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/film_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
 
 </LinearLayout>

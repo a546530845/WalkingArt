@@ -21,7 +21,7 @@ public class MyApplication extends Application {
         super.onCreate();
 
         mSharedPrefHelper = SharedPrefHelper.getInstance(this);
-        init();
+//        init();
 
         JPushInterface.setDebugMode(true);
         JPushInterface.init(this);

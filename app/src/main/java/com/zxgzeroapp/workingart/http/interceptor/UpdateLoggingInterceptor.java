@@ -20,7 +20,7 @@ import okio.BufferedSource;
  * 打印日志
  * Created by WZG on 2016/10/20.
  */
-public class LoggingInterceptor implements Interceptor {
+public class UpdateLoggingInterceptor implements Interceptor {
 
     public static final String TAG = "LogInterceptor.java";
 
@@ -37,8 +37,9 @@ public class LoggingInterceptor implements Interceptor {
         RequestBody requestBody = request.body();
         if (requestBody != null) {
             StringBuilder sb = new StringBuilder("Request Body [");
-            okio.Buffer buffer = new okio.Buffer();
-            requestBody.writeTo(buffer);
+            //因为上传请求重写了请求体，请求体中已经使用了写入方法，再次调用会有两次流写入，所以不能再写一下代码，会导致无法查看请求参数
+//            Buffer buffer = new Buffer();
+//            requestBody.writeTo(buffer);
             Charset charset = Charset.forName("UTF-8");
             MediaType contentType = requestBody.contentType();
             if (contentType != null) {
@@ -52,7 +53,7 @@ public class LoggingInterceptor implements Interceptor {
 //                sb.append(" (Content-Type = ").append(contentType.toString())
 //                        .append(",binary ").append(requestBody.contentLength()).append("-byte body omitted)");
 //            }
-            sb.append(buffer.readString(charset));
+//            sb.append(buffer.readString(charset));
             sb.append(" (Content-Type = ").append(contentType.toString())
                     .append(",binary ").append(requestBody.contentLength()).append("-byte body omitted)");
             sb.append("]");

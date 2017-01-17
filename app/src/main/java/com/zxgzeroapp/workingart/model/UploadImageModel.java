@@ -66,7 +66,7 @@ public class UploadImageModel implements IUpLoadImageModel{
         });
 
         mAppUpdateApi.setPart(part);
-        HttpManager.doHttpDeal(mAppUpdateApi);
+        HttpManager.doHttpDealForUpdate(mAppUpdateApi);
 
 
     }

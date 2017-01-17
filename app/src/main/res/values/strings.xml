@@ -1,6 +1,20 @@
 <resources>
     <string name="app_name">行走的艺术</string>
 
+
+    <!--refresh-->
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="release_to_refresh">释放立即刷新</string>
+    <string name="refreshing">正在刷新...</string>
+    <string name="refresh_succeed">刷新成功</string>
+    <string name="refresh_nomore">没有更多信息</string>
+    <string name="refresh_fail">刷新失败</string>
+    <string name="pullup_to_load">上拉加载更多</string>
+    <string name="release_to_load">释放立即加载</string>
+    <string name="loading">正在加载...</string>
+    <string name="load_succeed">加载成功</string>
+    <string name="load_fail">加载失败</string>
+
     <!--loadViewHelp-->
     <string name="bad_wangluo">加载失败\n轻触重新加载</string>
     <string name="no_content">没有更多内容</string>
@@ -14,6 +28,11 @@
     <string name="main_aty_weather">天气</string>
     <string name="main_aty_constellation">星座</string>
     <string name="main_aty_joke">笑话</string>
-    <string name="main_aty_filmreview">影评</string>
+    <string name="main_aty_filmreview">影视票房</string>
     <string name="main_aty_more">更多功能，敬请期待！</string>
+
+    <!--filmreviewActivity-->
+    <string name="film_aty_inland">内地</string>
+    <string name="film_aty_north">北美</string>
+    <string name="film_aty_hk">香港</string>
 </resources>

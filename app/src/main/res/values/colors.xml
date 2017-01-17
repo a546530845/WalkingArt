@@ -9,5 +9,17 @@
 
     <color name="white">#FFFFFF</color>
 
+    <!--refreshlayout-->
+    <color name="light_blue">#6593cb</color>//刷新的头
+    <color name="gray">#aaaaaa</color>
+    <color name="black">#000000</color>
+
+    <!--filmreviewActivity-->
+    <color name="film_viewpagerIndicator">#f5f0eb</color>
+    <color name="film_wide">#f5b02a</color>
+    <color name="linear_go_press">#20000000</color>
+    <!--film_item-->
+    <color name="film_item_numcolor">#444460</color>
+
 
 </resources>

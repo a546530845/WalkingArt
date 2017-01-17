@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:divider="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+    <com.zxgzeroapp.workingart.pullable.PullToRefreshLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+        <include layout="@layout/allview_refresh_head" />
+        <!-- 支持所有实现Pullable接口的View -->
+
+        <com.zxgzeroapp.workingart.pullable.PullableRecycleView
+            android:id="@+id/account_normal_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            divider:_dividerColor="@color/line_color"
+            android:layout_alignParentRight="true"
+            divider:_drawBound="true"
+            divider:_orientation="vertical"
+            divider:_thickness="10px">
+        </com.zxgzeroapp.workingart.pullable.PullableRecycleView>
+
+        <include layout="@layout/allview_load_more" />
+    </com.zxgzeroapp.workingart.pullable.PullToRefreshLayout>
+    <TextView
+        android:id="@+id/film_test"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="fgtment"/>
+
+</LinearLayout>
