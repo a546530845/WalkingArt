@@ -34,4 +34,6 @@ public class Constant {
      */
     public static final String FILMREVIEW_BASE = "http://v.juhe.cn/boxoffice/";
     public static final String FILMREVIEW = "rank.php?";
+    public static final String CONSTELLTIONDAY_BASE = "http://web.juhe.cn:8080/constellation/";
+    public static final String CONSTELLTIONDAY = "getAll?";
 }

@@ -67,7 +67,7 @@ public class FilmReviewActivity extends BaseActivity {
 
         mAdapter = new TempAdapter(getSupportFragmentManager(), mColumnList);
         film_vp.setAdapter(mAdapter);
-        film_vp.setOffscreenPageLimit(1);//当前界面左侧或者右侧缓存的界面数
+//        film_vp.setOffscreenPageLimit(1);//当前界面左侧或者右侧缓存的界面数
 
 
     }

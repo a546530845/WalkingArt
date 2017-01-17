@@ -97,9 +97,9 @@ public class FilmReviewFragment extends BaseFragment implements OnItemClickListe
 
     @Override
     public void lazyLoading(boolean isVisibleToUser) {
+        LogUtil.e("Filmfgt select", select+ isAttached+isVisibleToUser);
         if (isAttached && isVisibleToUser && null != mPullToRefreshLayout) {
             //view 还没有加载
-            LogUtil.e("Filmfgt select", select);
             mPullToRefreshLayout.autoRefresh();//自动刷新
         }
     }
@@ -119,6 +119,8 @@ public class FilmReviewFragment extends BaseFragment implements OnItemClickListe
 
         mPullToRefreshLayout = ((PullToRefreshLayout) mFgtView.findViewById(R.id.refresh_view));
         mPullableRecycleView = (PullableRecycleView) mFgtView.findViewById(R.id.account_normal_lv);
+
+        setAdapter();
 
         instanceLoadingViewHelp(mPullToRefreshLayout);
     }

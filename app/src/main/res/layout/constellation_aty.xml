@@ -5,9 +5,81 @@
     android:clipToPadding="false"
     android:fitsSystemWindows="true">
     <include layout="@layout/title_all"></include>
-    <TextView
+    <RadioGroup
+        android:id="@+id/constelltion_rg"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="星座"/>
+        android:layout_height="wrap_content"
+        android:background="@color/film_viewpagerIndicator"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="8dip"
+        android:padding="8dp"
+        android:paddingTop="8dip" >
+
+        <RadioButton
+            android:id="@+id/constelltion_rb_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/filmreview_selector"
+            android:button="@null"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingBottom="6dip"
+            android:paddingTop="6dip"
+            android:text="@string/constellation_aty_today"
+            android:textColor="@drawable/filmtext_color_selector"
+            android:textSize="@dimen/film_aty_indicatorsize" />
+
+        <RadioButton
+            android:id="@+id/constelltion_rb_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/filmreview_selector"
+            android:button="@null"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingBottom="6dip"
+            android:paddingTop="6dip"
+            android:text="@string/constellation_aty_month"
+            android:textColor="@drawable/filmtext_color_selector"
+            android:textSize="@dimen/film_aty_indicatorsize" />
+        <RadioButton
+            android:id="@+id/constelltion_rb_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/filmreview_selector"
+            android:button="@null"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingBottom="6dip"
+            android:paddingTop="6dip"
+            android:text="@string/constellation_aty_year"
+            android:textColor="@drawable/filmtext_color_selector"
+            android:textSize="@dimen/film_aty_indicatorsize" />
+        <RadioButton
+            android:id="@+id/constelltion_rb_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/filmreview_selector"
+            android:button="@null"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingBottom="6dip"
+            android:paddingTop="6dip"
+            android:text="@string/constellation_aty_year"
+            android:textColor="@drawable/filmtext_color_selector"
+            android:textSize="@dimen/film_aty_indicatorsize" />
+    </RadioGroup>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/constelltion_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
 
 </LinearLayout>
