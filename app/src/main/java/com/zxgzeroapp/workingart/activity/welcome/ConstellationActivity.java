@@ -11,6 +11,9 @@ import com.zxgzeroapp.workingart.R;
 import com.zxgzeroapp.workingart.adapter.TempFragmentpAdapter;
 import com.zxgzeroapp.workingart.base.BaseActivity;
 import com.zxgzeroapp.workingart.fragment.DayFragment;
+import com.zxgzeroapp.workingart.fragment.MonthFragment;
+import com.zxgzeroapp.workingart.fragment.WeekFragment;
+import com.zxgzeroapp.workingart.fragment.YearFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +23,7 @@ import java.util.List;
  * 星座页面
  */
 
-public class Constellation extends BaseActivity {
+public class ConstellationActivity extends BaseActivity {
     private ViewPager constelltion_vp;
     private RadioGroup constelltion_rg;
     private TempFragmentpAdapter mAdapter;
@@ -64,6 +67,9 @@ public class Constellation extends BaseActivity {
 
         mColumnList = new ArrayList<>();
         mColumnList.add(new DayFragment());
+        mColumnList.add(new WeekFragment());
+        mColumnList.add(new MonthFragment());
+        mColumnList.add(new YearFragment());
 
         mAdapter = new TempFragmentpAdapter(getSupportFragmentManager(), mColumnList);
         constelltion_vp.setAdapter(mAdapter);

@@ -28,7 +28,7 @@
             android:theme="@style/my_notitle"></activity>
         <activity android:name=".activity.welcome.WeaTherActivity"
             android:label="天气"></activity>
-        <activity android:name=".activity.welcome.Constellation"
+        <activity android:name=".activity.welcome.ConstellationActivity"
             android:label="星座"></activity>
         <activity android:name=".activity.welcome.JokeActivity"
             android:label="笑话"></activity>

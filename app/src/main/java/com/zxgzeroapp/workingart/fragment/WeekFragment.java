@@ -10,14 +10,14 @@ import android.view.ViewGroup;
 import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
 import com.zxgzeroapp.workingart.R;
 import com.zxgzeroapp.workingart.base.BaseFragment;
-import com.zxgzeroapp.workingart.bean.back.ConsTellToday;
+import com.zxgzeroapp.workingart.bean.back.ConsTellWeek;
 import com.zxgzeroapp.workingart.bean.back.FilmReviewBack;
 import com.zxgzeroapp.workingart.bean.request.ConstellationRequestBean;
-import com.zxgzeroapp.workingart.presenter.fragment.ConsDayFgtPresenter;
+import com.zxgzeroapp.workingart.presenter.fragment.ConsWeekFgtPresenter;
 import com.zxgzeroapp.workingart.pullable.PullToRefreshLayout;
 import com.zxgzeroapp.workingart.pullable.PullableScrollView;
 import com.zxgzeroapp.workingart.utils.LogUtil;
-import com.zxgzeroapp.workingart.view.fragment.IConsDayFgtView;
+import com.zxgzeroapp.workingart.view.fragment.IConsWeekFgtView;
 
 import java.util.ArrayList;
 
@@ -25,7 +25,7 @@ import java.util.ArrayList;
  * 作者：zxg on 2017/1/17 16:27
  */
 
-public class DayFragment extends BaseFragment implements PullToRefreshLayout.OnRefreshListener,IConsDayFgtView{
+public class WeekFragment extends BaseFragment implements PullToRefreshLayout.OnRefreshListener,IConsWeekFgtView{
     private static String TAG = "DayFragment";
 
     private PullableScrollView mPullableScrollView;
@@ -81,17 +81,17 @@ public class DayFragment extends BaseFragment implements PullToRefreshLayout.OnR
     @Override
     public void setView(LayoutInflater inflater, @Nullable ViewGroup container) {
         //attachToRoot,如果少了这个参数传入的话，会出现堆栈溢出
-        mFgtView = inflater.inflate(R.layout.collection_day_fgt, container, false);
+        mFgtView = inflater.inflate(R.layout.collection_week_fgt, container, false);
     }
 
     public void getDataFromServer() {
         ConstellationRequestBean mConstellationRequestBean = new ConstellationRequestBean();
         mConstellationRequestBean.setKey("xxxxx");
         mConstellationRequestBean.setConsName("天秤座");
-        mConstellationRequestBean.setType("today");
+        mConstellationRequestBean.setType("week");
         //获取数据
-        ConsDayFgtPresenter mConsDayFgtPresenter = new ConsDayFgtPresenter(this);
-        mConsDayFgtPresenter.getConsTelltionDayBack((RxAppCompatActivity)mContext,mConstellationRequestBean);
+        ConsWeekFgtPresenter mConsWeekFgtPresenter = new ConsWeekFgtPresenter(this);
+        mConsWeekFgtPresenter.getConsTelltionWeekBack((RxAppCompatActivity)mContext,mConstellationRequestBean);
     }
 
     @Override
@@ -147,10 +147,9 @@ public class DayFragment extends BaseFragment implements PullToRefreshLayout.OnR
     }
 
     @Override
-    public void ConsDaySucess(ConsTellToday bean) {
+    public void ConsWeekSucess(ConsTellWeek bean) {
         isLoading = false;
-        LogUtil.e("ConsTellToday = ",bean.toString());
-
+        LogUtil.e("ConsTellWeek = ",bean.toString());
         FilmReviewBack.ResultBean mResultBean = new FilmReviewBack.ResultBean();
         mResultBean.setName("中国合伙人" );
         mResultBean.setRid("1");
@@ -171,7 +170,7 @@ public class DayFragment extends BaseFragment implements PullToRefreshLayout.OnR
     }
 
     @Override
-    public void ConsDayError(Throwable ex) {
+    public void ConsWeekError(Throwable ex) {
         isLoading = false;
         helper.showFail(getResources().getString(R.string.bad_wangluo), new View.OnClickListener() {
 
@@ -186,12 +185,12 @@ public class DayFragment extends BaseFragment implements PullToRefreshLayout.OnR
     }
 
     @Override
-    public void ConsDayPrepare() {
+    public void ConsWeekPrepare() {
 
     }
 
     @Override
-    public void ConsDayfinish() {
+    public void ConsWeekfinish() {
 
     }
 }

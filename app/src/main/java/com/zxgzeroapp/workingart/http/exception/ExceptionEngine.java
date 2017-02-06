@@ -3,6 +3,7 @@ package com.zxgzeroapp.workingart.http.exception;
 import android.net.ParseException;
 
 import com.google.gson.JsonParseException;
+import com.zxgzeroapp.workingart.utils.LogUtil;
 import com.zxgzeroapp.workingart.utils.ToastUtil;
 import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
 
@@ -28,6 +29,7 @@ public class ExceptionEngine {
     private static final int GATEWAY_TIMEOUT = 504;
 
     public static ApiException handleException(Throwable e, RxAppCompatActivity mActivity){
+        LogUtil.e("handleException = ",e.toString());
         ApiException ex;
         if (e instanceof HttpException){             //HTTP错误
             HttpException httpException = (HttpException) e;

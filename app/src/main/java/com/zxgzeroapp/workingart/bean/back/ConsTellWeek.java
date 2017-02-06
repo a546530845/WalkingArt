@@ -1,11 +1,13 @@
 package com.zxgzeroapp.workingart.bean.back;
 
+import com.zxgzeroapp.workingart.base.BaseBean;
+
 /**
  * 作者：zxg on 2017/1/17 15:48
  * /*本周或下周运势格式
  */
 
-public class ConsTellWeek {
+public class ConsTellWeek extends BaseBean {
 
     /**
      * name : 白羊座
@@ -30,6 +32,22 @@ public class ConsTellWeek {
     private String work;
     private String resultcode;
     private int error_code;
+
+    @Override
+    public String toString() {
+        return "ConsTellWeek{" +
+                "date='" + date + '\'' +
+                ", name='" + name + '\'' +
+                ", weekth=" + weekth +
+                ", health='" + health + '\'' +
+                ", job='" + job + '\'' +
+                ", love='" + love + '\'' +
+                ", money='" + money + '\'' +
+                ", work='" + work + '\'' +
+                ", resultcode='" + resultcode + '\'' +
+                ", error_code=" + error_code +
+                "} " + super.toString();
+    }
 
     public String getName() {
         return name;

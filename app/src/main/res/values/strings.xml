@@ -37,6 +37,7 @@
     <string name="film_aty_hk">香港</string>
     <!--constellation-->
     <string name="constellation_aty_today">本日</string>
+    <string name="constellation_aty_week">本周</string>
     <string name="constellation_aty_month">本月</string>
     <string name="constellation_aty_year">本年</string>
     <string name="constellation_aty_title">星座</string>

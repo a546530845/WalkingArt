@@ -3,7 +3,7 @@ package com.zxgzeroapp.workingart.activity;
 import android.view.View;
 
 import com.zxgzeroapp.workingart.R;
-import com.zxgzeroapp.workingart.activity.welcome.Constellation;
+import com.zxgzeroapp.workingart.activity.welcome.ConstellationActivity;
 import com.zxgzeroapp.workingart.activity.welcome.FilmReviewActivity;
 import com.zxgzeroapp.workingart.activity.welcome.JokeActivity;
 import com.zxgzeroapp.workingart.activity.welcome.WeaTherActivity;
@@ -62,7 +62,7 @@ public class MainActivity extends BaseActivity {
                 Map<String, String> extraMap_constellation = new HashMap<String, String>();
                 extraMap_constellation.put("星座", "查看星座");
                 JEventUtils.onCountEvent(this,"ConstellationId",extraMap_constellation);
-                SkipActivityUtils.skipActivity(mContext, Constellation.class);
+                SkipActivityUtils.skipActivity(mContext, ConstellationActivity.class);
                 break;
             case R.id.main_aty_joke:
                 Map<String, String> extraMap_joke = new HashMap<String, String>();

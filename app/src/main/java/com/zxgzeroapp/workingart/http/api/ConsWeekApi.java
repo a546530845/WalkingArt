@@ -12,7 +12,7 @@ import rx.Observable;
  * 测试数据
  * Created by WZG on 2016/7/16.
  */
-public class ConsDayApi extends BaseApi {
+public class ConsWeekApi extends BaseApi {
     private ConstellationRequestBean mConstellationRequestBean;
     /*任何你先要传递的参数*/
 //    String xxxxx;
@@ -28,7 +28,7 @@ public class ConsDayApi extends BaseApi {
      * @param listener
      * @param rxAppCompatActivity
      */
-    public <T> ConsDayApi(RxAppCompatActivity rxAppCompatActivity, ConstellationRequestBean mConstellationRequestBean, OnHttpTaskListener<T> listener) {
+    public <T> ConsWeekApi(RxAppCompatActivity rxAppCompatActivity, ConstellationRequestBean mConstellationRequestBean, OnHttpTaskListener<T> listener) {
         super(listener, rxAppCompatActivity);
         this.mConstellationRequestBean = mConstellationRequestBean;
     }

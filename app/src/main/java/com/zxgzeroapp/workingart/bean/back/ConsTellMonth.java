@@ -1,11 +1,13 @@
 package com.zxgzeroapp.workingart.bean.back;
 
+import com.zxgzeroapp.workingart.base.BaseBean;
+
 /**
  * 作者：zxg on 2017/1/17 15:49
  * /*本月运势
  */
 
-public class ConsTellMonth {
+public class ConsTellMonth extends BaseBean {
 
     /**
      * date : 2016年12月
@@ -32,6 +34,23 @@ public class ConsTellMonth {
     private String work;
     private String resultcode;
     private int error_code;
+
+    @Override
+    public String toString() {
+        return "ConsTellMonth{" +
+                "all='" + all + '\'' +
+                ", date='" + date + '\'' +
+                ", name='" + name + '\'' +
+                ", happyMagic='" + happyMagic + '\'' +
+                ", health='" + health + '\'' +
+                ", love='" + love + '\'' +
+                ", money='" + money + '\'' +
+                ", month=" + month +
+                ", work='" + work + '\'' +
+                ", resultcode='" + resultcode + '\'' +
+                ", error_code=" + error_code +
+                "} " + super.toString();
+    }
 
     public String getDate() {
         return date;

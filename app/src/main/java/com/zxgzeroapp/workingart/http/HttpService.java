@@ -2,7 +2,10 @@ package com.zxgzeroapp.workingart.http;
 
 
 import com.zxgzeroapp.workingart.bean.back.AppUpdateBackBean;
+import com.zxgzeroapp.workingart.bean.back.ConsTellMonth;
 import com.zxgzeroapp.workingart.bean.back.ConsTellToday;
+import com.zxgzeroapp.workingart.bean.back.ConsTellWeek;
+import com.zxgzeroapp.workingart.bean.back.ConsTellYear;
 import com.zxgzeroapp.workingart.bean.back.FilmReviewBack;
 import com.zxgzeroapp.workingart.bean.back.LoginBackBean;
 import com.zxgzeroapp.workingart.bean.back.UpLoadPicBackBean;
@@ -55,12 +58,18 @@ public interface HttpService {
     @POST(Constant.FILMREVIEW)
     Observable<FilmReviewBack> FILMREVIEW(@Body FilmRequestBean maps);
     /**
-     * 电影票房
+     * 星座today
      * @param maps
      * @return
      */
     @POST(Constant.CONSTELLTIONDAY)
     Observable<ConsTellToday> CONSTELLTIONDAY(@Body ConstellationRequestBean maps);
+    @POST(Constant.CONSTELLTIONDAY)
+    Observable<ConsTellWeek> CONSTELLTIONWEEK(@Body ConstellationRequestBean maps);
+    @POST(Constant.CONSTELLTIONDAY)
+    Observable<ConsTellMonth> CONSTELLTIONMONTH(@Body ConstellationRequestBean maps);
+    @POST(Constant.CONSTELLTIONDAY)
+    Observable<ConsTellYear> CONSTELLTIONYEAR(@Body ConstellationRequestBean maps);
 
 
     /*断点续传下载接口*/

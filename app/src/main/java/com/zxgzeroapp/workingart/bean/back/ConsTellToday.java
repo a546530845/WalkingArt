@@ -1,13 +1,17 @@
 package com.zxgzeroapp.workingart.bean.back;
 
+import com.zxgzeroapp.workingart.base.BaseBean;
+
 /**
  * 作者：zxg on 2017/1/17 15:29
  * /*今日或明日运势格式
  */
 
-public class ConsTellToday {
+public class ConsTellToday extends BaseBean{
 
     /**
+     * "resultcode":"101",
+     * "reason":"KEY ERROR!",
      * name : 狮子座
      * datetime : 2014年06月27日
      * date : 20140627
@@ -36,6 +40,25 @@ public class ConsTellToday {
     private String summary;
     private String work;
     private int error_code;
+
+    @Override
+    public String toString() {
+        return "ConsTellToday{" +
+                "all='" + all + '\'' +
+                ", name='" + name + '\'' +
+                ", datetime='" + datetime + '\'' +
+                ", date=" + date +
+                ", color='" + color + '\'' +
+                ", health='" + health + '\'' +
+                ", love='" + love + '\'' +
+                ", money='" + money + '\'' +
+                ", number=" + number +
+                ", QFriend='" + QFriend + '\'' +
+                ", summary='" + summary + '\'' +
+                ", work='" + work + '\'' +
+                ", error_code=" + error_code +
+                "} " + super.toString();
+    }
 
     public String getName() {
         return name;

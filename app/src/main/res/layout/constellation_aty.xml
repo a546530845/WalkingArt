@@ -42,9 +42,10 @@
             android:gravity="center"
             android:paddingBottom="6dip"
             android:paddingTop="6dip"
-            android:text="@string/constellation_aty_month"
+            android:text="@string/constellation_aty_week"
             android:textColor="@drawable/filmtext_color_selector"
             android:textSize="@dimen/film_aty_indicatorsize" />
+
         <RadioButton
             android:id="@+id/constelltion_rb_month"
             android:layout_width="wrap_content"
@@ -56,9 +57,10 @@
             android:gravity="center"
             android:paddingBottom="6dip"
             android:paddingTop="6dip"
-            android:text="@string/constellation_aty_year"
+            android:text="@string/constellation_aty_month"
             android:textColor="@drawable/filmtext_color_selector"
             android:textSize="@dimen/film_aty_indicatorsize" />
+
         <RadioButton
             android:id="@+id/constelltion_rb_year"
             android:layout_width="wrap_content"

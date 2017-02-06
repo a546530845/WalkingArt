@@ -17,4 +17,37 @@ import java.io.Serializable;
 //        }
 public class BaseBean implements Serializable {
 
+
+    /**
+     * resultcode : 101
+     * reason : KEY ERROR!
+     */
+
+    private String resultcode;
+    private String reason;
+
+    public String getResultcode() {
+        return resultcode;
+    }
+
+    public void setResultcode(String resultcode) {
+        this.resultcode = resultcode;
+    }
+
+    public String getReason() {
+        return reason;
+    }
+
+    public void setReason(String reason) {
+        this.reason = reason;
+    }
+
+    @Override
+    public String toString() {
+        return "BaseBean{" +
+                "reason='" + reason + '\'' +
+                ", resultcode='" + resultcode + '\'' +
+                '}';
+    }
+
 }

@@ -1,11 +1,13 @@
 package com.zxgzeroapp.workingart.bean.back;
 
+import com.zxgzeroapp.workingart.base.BaseBean;
+
 /**
  * 作者：zxg on 2017/1/17 15:53
  * /*本年运势
  */
 
-public class ConsTellYear {
+public class ConsTellYear extends BaseBean {
 
     /**
      * name : 白羊座
@@ -30,6 +32,18 @@ public class ConsTellYear {
      */
 
     private MimaBean mima;
+
+    @Override
+    public String toString() {
+        return "ConsTellYear{" +
+                "date='" + date + '\'' +
+                ", name='" + name + '\'' +
+                ", year=" + year +
+                ", resultcode='" + resultcode + '\'' +
+                ", error_code=" + error_code +
+                ", mima=" + mima +
+                "} " + super.toString();
+    }
 
     public String getName() {
         return name;
