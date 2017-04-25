@@ -33,8 +33,8 @@ public class JpushNotificationUtils {
      */
     public static void  setDiyStyleCustom(Context mContext){
         CustomPushNotificationBuilder builder = new CustomPushNotificationBuilder(mContext,R.layout.customer_notitfication_layout,R.id.icon, R.id.title, R.id.text);
-        builder.layoutIconDrawable = R.mipmap.logo;
-        builder.statusBarDrawable = R.mipmap.logo;
+        builder.layoutIconDrawable = R.mipmap.ic_launcher;
+        builder.statusBarDrawable = R.mipmap.ic_launcher;
         builder.developerArg0 = "developerArg2";
         JPushInterface.setPushNotificationBuilder(1, builder);
         Toast.makeText(mContext,"自定义设置成功", Toast.LENGTH_SHORT).show();

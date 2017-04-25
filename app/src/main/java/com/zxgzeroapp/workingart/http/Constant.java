@@ -9,7 +9,7 @@ public class Constant {
     /**
      * 服务器名称
      */
-//    private static final String APP_SERVER_NAME = "";
+    public static final String APP_SERVER_NAME = "";
 
 
 
